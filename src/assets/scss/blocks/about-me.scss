@@ -1,0 +1,84 @@
+.about-me {
+	padding-top: 95px;
+	margin-bottom: 67px;
+
+	::-webkit-scrollbar {
+		width: 8px; /* ширина для вертикального скролла */
+		background-color: transparent;
+	}
+	
+	/* ползунок скроллбара */
+	::-webkit-scrollbar-thumb {
+		background-color: #d9d9d9;
+		border: 2px solid rgba(0, 0, 0, 0);
+		background-clip: padding-box;
+		border-radius: 10px;
+		&:hover {
+			background-color: #a7a7a7;
+		}
+	}
+	
+	// ::-webkit-scrollbar-thumb:hover {
+		
+	// }
+
+	&__icon {
+		margin-bottom: 26px;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+	}
+
+	&__title-description {
+		max-width: 515px;
+		margin: 0 auto;
+		font-family: 'RobotoLight';
+		font-size: calc(14px + 2 * ((100vw - 320px) / (1170 - 320)));
+		margin-bottom: 35px;
+		letter-spacing: -0.1px;
+	}	
+
+	&__text {
+		outline: none;
+		width: 100%;
+		max-width: 520px;
+		line-height: 1.65rem;
+		color: #1c1c1c;
+		max-height: 130px; 
+		padding: 0px 10px;
+		border: none;
+		resize: none;
+		font-family: 'RobotoRegular';
+		font-size: calc(14px + 4 * ((100vw - 320px) / (1170 - 320)));
+	}
+
+	&__label-text {
+		pointer-events: none;
+		color: #c8c8c8;
+		position: absolute;
+		line-height: 1;
+		transition: all 200ms;
+		top: 13%;
+		left: 4%;
+		letter-spacing: -0.2px;
+		// transform:translate(-50%, -50%);
+		font-size: calc(16px + 4 * ((100vw - 320px) / (1170 - 320)));
+	}
+
+	&__wrap {
+		overflow: auto;
+		padding: 40px 0px 10px 0px;
+		border: 1px solid #e5e5e5;
+		border-radius: 5px;
+		max-width: 520px;
+		margin: 0 auto;
+		position: relative;
+		& .about-me__text:focus + label,
+		& .about-me__text:not(:placeholder-shown) + label{
+			font-size: 14px; 
+			top: 8%;
+			left: 2.5%;
+		}
+	}
+}
