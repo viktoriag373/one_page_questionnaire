@@ -10,18 +10,20 @@
 
 		<!-- Main -->
 		<main class="main">
-			<div class="container">
-				<!-- <section class="perosonal-info" style="height: 100vh;">Личная информация</section>
-				<section class="experience" style="height: 100vh;">Опыт</section>
-				<section class="js" style="height: 100vh;">Джаваскрипт</section>
-				<section class="about" style="height: 100vh;">Обо мне</section> -->
-			</div>
+			<h2 class="main__title">Анкета</h2>
+			<form action="#">
+				{{> personal-info }}
+				{{> experience }}
+				{{> javascript }}
+				{{> about-me }}
+				<button type="submit" class="main__button">Готово</button>
+			</form>
 		</main>
 	</div>
 
 
 
 	<!-- JS -->
-	<script  src="assets/js/script.js"></script>
+	{{> script }}
 </body>
 </html>
