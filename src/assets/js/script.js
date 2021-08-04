@@ -2,6 +2,7 @@
 
 window.onload = function () {
 	const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+	console.dir(menuLinks);
 	if (menuLinks.length > 0) {
 		menuLinks.forEach(menuLink => {
 			menuLink.addEventListener("click", onMenuLinkClick);
@@ -39,29 +40,5 @@ window.onload = function () {
 			menuBody.classList.toggle('_active');
 		})
 	}
+
 }
-
-// window.onload = function () {
-// 	const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-// 	if (menuLinks.length > 0) {
-// 		menuLinks.forEach(menuLink => {
-// 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-// 			if (gotoBlock) {
-// 				menuLink.addEventListener("click", function(e) {
-// 					onMenuLinkClick(gotoBlock);
-// 					e.preventDefault();
-// 				});
-// 			}
-// 		});
-// 	}
-
-// 	function onMenuLinkClick(gotoBlock) {
-// 		const gotoBlockValue = gotoBlock.getBoundingClientRect().top +
-// 			pageYOffset - document.querySelector('.header').offsetHeight;
-
-// 		window.scrollTo ({
-// 			top: gotoBlockValue,
-// 			behavior: "smooth"
-// 		});
-// 	}
-// }

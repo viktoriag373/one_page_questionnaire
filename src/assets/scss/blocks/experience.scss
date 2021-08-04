@@ -1,0 +1,139 @@
+.experience {
+	margin-bottom: 124px;
+	@media (max-width: 576px) {
+		margin-bottom: 50px;
+	}
+	&__container {
+		max-width: 798px;
+		padding: 0 15px;
+	}
+
+	&__label-technologies {
+		font-family: 'RobotoLight';
+		font-size: calc(12px + 4 * ((100vw - 576px) / (1170 - 576)));
+		margin-bottom: 9px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		letter-spacing: -0.5px;
+		@media (max-width: 576px) {
+			font-size: 16px
+		}
+	}
+
+	&__label-technologies::before {
+		content: " ";
+		display: inline-block;
+		margin-right: 10px;
+		position: relative;
+		text-align: center;
+		width: 20px;
+		height: 20px;
+		background: #FFF;
+		border: 1px solid #435993;
+		border-radius: 3px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__technologies {
+		display: none;
+
+	}
+
+	&__technologies:hover + 
+	&__label-technologies::before {
+		background: #e9efff;
+		transition: all 0.3s;
+	}
+
+	&__technologies:checked + 
+	&__label-technologies::before {
+		content: url(../images/arrow-cheked.png);
+		background: #435993;
+		color: #fff;
+		transition: all 0.3s;
+	}
+
+	&__wrappper {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 576px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		// margin-right: 90px;
+		flex-wrap: wrap;
+		&:nth-child(2) {
+			margin-left: 26px;
+		}
+		&:last-child {
+			margin-right: 81px;
+		}
+
+		@media (max-width: 576px) {
+			min-width: 200px;
+			margin-bottom: 30px;
+			&:nth-child(2) {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+//   input[type="checkbox"] {
+//    display: none;
+//   }
+  
+//   input:hover + label:before {
+// 	background: #e9efff;
+// 	transition: all 0.3s;
+//   }
+   
+  
+//   label {
+//    color: #000;
+//    cursor: pointer;
+//    font-weight: normal;
+//    vertical-align: middle;
+//   }
+  
+ // label:before {
+//    content: " ";
+//    color: #000;
+//    display: inline-block;
+  
+//    margin-right: 15px;
+//    position: relative;
+//    text-align: center;
+//    // text-indent: 0px;
+//    width: 20px;
+//    height: 20px;
+//    background: #FFF;
+//    border: 1px solid #435993;
+//    border-radius: 3px;
+//    vertical-align: middle;
+//  }
+   
+//   input:checked + label:before {
+//   /* глифон - галочка */
+//    content: '\10003';
+// 	background: #435993;
+// 	color: #fff
+//   }
