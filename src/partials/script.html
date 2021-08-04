@@ -1,0 +1,56 @@
+<script  src="assets/js/script.js"></script>
+<script  src="assets/js/custom_select.js"></script>
+
+<script>
+	let currentYear = new Date().getFullYear();
+	let datesArray = []
+	for (let year = currentYear - 18; year >= currentYear-100; year--) {
+		datesArray.push(year)
+	}
+
+	const select1 = new CustomSelect('.select', {
+		defaultValue: 'Год рождения',
+		data: datesArray,
+		onSelected(item) {
+			console.log(`Выбранное значение: ${item.textContent}`);
+		},
+	});
+
+	// document.querySelector('.select').addEventListener('select.change', (e) => {
+	// 	console.log(
+	// 		`Выбранное значение: ${
+	// 		e.target.querySelector('.select__item_selected').textContent
+	// 		}`
+	// 	);
+	// });
+	
+
+	//slider
+	let bgPolygon = document.getElementById('bg');
+	function onSlide(slider) {
+		if (+slider.value >= 2) {
+			slider.step = 2;
+		} else {
+			slider.step = 1;
+		}
+
+		var pos = (+slider.value * 768) / 4 //+i.value;
+		var bgP3 = {
+			x: pos,
+			y: 25
+		}
+		var bgP4 = {
+			x: pos,
+			y: 23 - (pos * (14 - 2)) / 768
+		}
+
+		bgPolygon.setAttribute(
+			"points",
+			`768,11 768,25 ${bgP3.x},${bgP3.y} ${bgP4.x},${bgP4.y}`
+		);
+	}
+
+</script>
+
+
+<script  src="assets/js/me-data.js"></script>
